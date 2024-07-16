@@ -2,7 +2,13 @@
 
 <h1>BLOG APPLICATION</h1>
 
-<p>This application uses opal's custom postgres fetcher to check the permissions of the users involved in the application</p>
+<p>Certainly! Here’s a more detailed version of the provided paragraph:
+
+
+
+This application leverages MindsDB to deliver intelligent chat assistance and automatically categorize each post into specific categories. Users can view all posts, comment on them, like their favorites, and create new posts. The app uses token-based authentication to ensure secure access and interactions. Additionally, users have the ability to report posts, helping to maintain content quality and compliance with community standards.
+
+</p>
 <hr>
 
 ## Tech Stack
