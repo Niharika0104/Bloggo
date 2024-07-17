@@ -25,7 +25,6 @@ This application leverages MindsDB to deliver intelligent chat assistance and au
 
 ![image](https://github.com/user-attachments/assets/383ac172-0fd0-4ee0-bbba-1e7ec86f9389)
 ![image](https://github.com/user-attachments/assets/d3893b01-69a0-4a83-8a08-1691c1487f5b)
-
 ![image](https://github.com/user-attachments/assets/7cba4050-4f02-428a-93b9-fbece2e3a1d9)
 ![image](https://github.com/user-attachments/assets/67fdd6fc-b1d2-4a1f-936b-2fc795c3f9b1)
 ![image](https://github.com/user-attachments/assets/855fae65-29a8-455d-9c19-ae9a2204c115)
@@ -50,43 +49,36 @@ These are the steps required to install/run the project.
     git clone https://github.com/your-username/your-repository.git .
     ```
 
-3. **Navigate to the project directory:**
+3. **Create `.env` file in the  root folder:**
 
     ```bash
-    cd blog-application
+     DATABASE_URL=<YOUR_dB_URL>"
+   SECRET_KEY=<your secret key>
+    MINDSDB_KEY=<your api key>
+    MINDS_URL=<minds url>
+    BASE_URL=<application url>
     ```
 
-4. **Navigate to the client folder:**
-
-    ```bash
-    cd client
-    ```
-
-5. **Create `.env` file in the  root folder:**
-
-    ```bash
-     "DBURL=<YOUR_dB_URL>"
-     "PASSWORD"=<PASSWORD>
-    ```
-
-6. **Install  dependencies:**
+4. **Install  dependencies:**
 
     ```bash
     npm install
     ```
+5.**Create minds db Docker container:**
 
-7. **Start the application:**
+    ```bash
+    docker run --name mindsdb_container -p47334:47334 -p47335:47335 mindsdb/mindsdb
+    ```
+6. **Start the application:**
 
     ```bash
     npm run dev
     ```
-8. **Open another terminal and navigate to the root folder:**
+7. **Use the GUI provided by the docker container to create models**
 
-    ```bash
-    docker compose up
-    ```
+     - Go the editor router of that docker container url
 
-9. **Now you are all set to start working on this project and do some contributions:**
+8. **Now you are all set to start working on this project and do some contributions:**
 
     - Make your changes.
     - Stage and commit your changes.
