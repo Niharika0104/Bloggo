@@ -1,0 +1,25 @@
+{
+  "name": "Bloggo Dev Container",
+  "image": "node:latest",
+  "postCreateCommand": "npm install && npx prisma generate",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "forwardPorts": [3000],
+  "remoteUser": "node",
+  "postStartCommand": "npm run dev",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.env.local,target=/workspace/.env.local,type=bind"
+  ]
+}
