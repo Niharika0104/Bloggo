@@ -5,7 +5,7 @@
     "context": "."
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workdir",
   "postCreateCommand": "npm install | tee /tmp/postCreateCommand.log",
   "customizations": {
     "vscode": {
