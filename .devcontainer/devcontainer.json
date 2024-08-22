@@ -4,7 +4,9 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "npm install | tee /tmp/postCreateCommand.log",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -20,6 +22,6 @@
     }
   },
   "forwardPorts": [3000],
-  "remoteUser": "node"
-  
+  "remoteUser": "node",
+  "postStartCommand": "npm run dev | tee /tmp/postStartCommand.log"
 }
