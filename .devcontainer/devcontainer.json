@@ -1,6 +1,6 @@
 {
   "name": "Bloggo Dev Container",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": { "dockerfile": "Dockerfile" ,"context": "."},
   "postCreateCommand": "npm install && npx prisma generate",
   "customizations": {
     "vscode": {
