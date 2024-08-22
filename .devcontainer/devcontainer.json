@@ -1,7 +1,10 @@
 {
   "name": "Bloggo Dev Container",
-  "build": { "dockerfile": "Dockerfile" ,"context": "."},
-  "postCreateCommand": "npm install ",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "postCreateCommand": "npm install | tee /tmp/postCreateCommand.log",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -18,5 +21,5 @@
   },
   "forwardPorts": [3000],
   "remoteUser": "node",
-  "postStartCommand": "npm run dev"
+  "postStartCommand": "npm run dev | tee /tmp/postStartCommand.log"
 }
