@@ -22,6 +22,5 @@
     }
   },
   "forwardPorts": [3000],
-  "remoteUser": "node",
   "postStartCommand": "npm run dev | tee /tmp/postStartCommand.log"
 }
