@@ -4,8 +4,7 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "workspaceFolder": "/workdir",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "postCreateCommand": "npm install | tee /tmp/postCreateCommand.log",
   "customizations": {
     "vscode": {
