@@ -1,0 +1,21 @@
+{
+    "name": "Bloggo Dev Container",
+    "build": {
+      "dockerfile": "../Dockerfile",
+      "context": "."
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint"
+        ]
+      }
+    },
+    "portsAttributes": {
+      "3000": {
+        "label": "Next.js Dev Server",
+        "onAutoForward": "notify"
+      }
+    }
+  }
