@@ -18,8 +18,5 @@
   },
   "forwardPorts": [3000],
   "remoteUser": "node",
-  "postStartCommand": "npm run dev",
-  "mounts": [
-    "source=${localWorkspaceFolder}/.env.local,target=/workspace/.env.local,type=bind"
-  ]
+  "postStartCommand": "npm run dev"
 }
