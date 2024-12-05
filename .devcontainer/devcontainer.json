@@ -1,7 +1,10 @@
 {
   "name": "Bloggo Dev Container",
-  "image": "node:latest",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "postCreateCommand": "npm install && npx prisma generate",
+  
   "portsAttributes": {
     "3000": {
       "label": "Next.js Dev Server",
