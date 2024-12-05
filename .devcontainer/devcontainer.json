@@ -1,16 +1,21 @@
 {
   "name": "Bloggo Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "postCreateCommand": "npm install && npx prisma generate",
-  
-  "portsAttributes": {
-    "3000": {
-      "label": "Next.js Dev Server",
-      "onAutoForward": "notify"
+  "image": "node:latest",
+  "forwardPorts": [
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true
+      },
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "Grafikart.vscode-whatsnew"
+      ]
     }
   },
-  "forwardPorts": [3000],
-  "postStartCommand": "npm run dev"
+  "postCreateCommand": "npm install && npx prisma generate"
 }
