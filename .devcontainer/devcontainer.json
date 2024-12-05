@@ -2,14 +2,6 @@
   "name": "Bloggo Dev Container",
   "image": "node:latest",
   "postCreateCommand": "npm install && npx prisma generate",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint"
-      ]
-    }
-  },
   "portsAttributes": {
     "3000": {
       "label": "Next.js Dev Server",
