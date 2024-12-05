@@ -1,19 +1,25 @@
 {
   "name": "Bloggo Dev Container",
-  "image": "node:latest",
-  "forwardPorts": [
-    3000
-  ],
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "forwardPorts": [3000],
   "customizations": {
     "vscode": {
       "settings": {
-        "typescript.tsdk": "node_modules/typescript/lib",
-        "typescript.enablePromptUseWorkspaceTsdk": true
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.autoSave": "onWindowChange",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
       },
       "extensions": [
-        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
         "dbaeumer.vscode-eslint",
-        "Grafikart.vscode-whatsnew"
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets",
+        "formulahendry.auto-rename-tag",
+        "bradlc.vscode-tailwindcss",
+        "christian-kohler.path-intellisense",
+        "ms-vscode.vscode-typescript-next"
       ]
     }
   },
